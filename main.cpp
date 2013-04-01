@@ -12,6 +12,6 @@ using namespace std;
 
 int main(int argc, const char * argv[])
 {
-    cout << "HELLO WORLD" << endl;
+    cout << "Space Station Build Game" << endl;
 }
 
