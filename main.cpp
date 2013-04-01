@@ -19,10 +19,15 @@ int main(int argc, char ** argv)
 {
     cout << "Space Station Build Game" << endl;
     
+    int x = 100;
+    int y = 100;
+    int width = 640;
+    int height = 480;
+    
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-    glutInitWindowPosition(100, 100);
-    glutInitWindowSize(640, 480);
+    glutInitWindowPosition(x, y);
+    glutInitWindowSize(width, height);
     
     glutCreateWindow("Space Station Build Game");
     
