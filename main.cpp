@@ -8,10 +8,29 @@
 
 #include <iostream>
 #include "includes-for-main.h"
+
 using namespace std;
 
-int main(int argc, const char * argv[])
+void render(void);
+
+int argumentc;
+
+int main(int argc, char ** argv)
 {
     cout << "Space Station Build Game" << endl;
+    
+    glutInit(&argc,argv);
+    glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+    glutInitWindowPosition(100, 100);
+    glutInitWindowSize(640, 480);
+    
+    glutCreateWindow("Space Station Build Game");
+    
+    glutDisplayFunc(render);
+    
+    glutMainLoop();
 }
 
+void render(void){
+    
+}
