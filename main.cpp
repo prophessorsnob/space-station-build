@@ -12,7 +12,7 @@
 using namespace std;
 
 void render(void);
-void initGlutWindowVariables(int x, int y, int width, int height);
+void initGlutWindowVariables(int x, int y, int width, int height,const char *title);
 
 int argumentc;
 
@@ -26,19 +26,18 @@ int main(int argc, char ** argv)
     int height = 480;
     
     glutInit(&argc,argv);
-    initGlutWindowVariables(x,y,width,height);
-    
-    glutCreateWindow("Space Station Build Game");
+    initGlutWindowVariables(x,y,width,height,"Space Station Build Game");
     
     glutDisplayFunc(render);
     
     glutMainLoop();
 }
 
-void initGlutWindowVariables(int x, int y, int width, int height){
+void initGlutWindowVariables(int x, int y, int width, int height, const char *title){
     glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
     glutInitWindowPosition(x, y);
     glutInitWindowSize(width, height);
+    glutCreateWindow(title);
 }
 
 void render(void){
