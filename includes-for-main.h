@@ -12,4 +12,7 @@
 #include <GLUT/GLUT.h>
 #include <OpenGL/OpenGL.h>
 
+#include "window.h"
+#include "updateFunctions.h"
+
 #endif
