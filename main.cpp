@@ -27,10 +27,6 @@ int main(int argc, char ** argv)
     
     glutInit(&argc,argv);
     initGlutWindowVariables(x,y,width,height,"Space Station Build Game",render);
-    
-    //glutDisplayFunc(render);
-    
-    glutMainLoop();
 }
 
 void initGlutWindowVariables(int x, int y, int width, int height, const char *title, void (*func)()){
@@ -40,6 +36,7 @@ void initGlutWindowVariables(int x, int y, int width, int height, const char *ti
     glutCreateWindow(title);
     
     glutDisplayFunc(func);
+    glutMainLoop();
 }
 
 void render(void){
